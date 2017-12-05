@@ -2,8 +2,7 @@ def turn(board)
   puts "Where would you like to go?"
   index = input_to_index(gets.strip)
   if valid_move?(board, index)
-    move(board, index)
-    display_board(board)
+    display_board(move(board, index))
   else
     puts "That's not a valid move. Please try again"
     turn(board)
