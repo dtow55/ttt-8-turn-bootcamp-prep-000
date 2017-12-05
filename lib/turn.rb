@@ -1,10 +1,12 @@
 def turn
-#ask for input
-
-#get input
-
-#convert input to index
-
+  puts "Where would you like to go?"
+  index = input_to_index(gets.strip)
+  if valid_move?(board, index)
+    move(board, index)
+  else
+    puts "That's not a valid move."
+  end
+  display_board(board)
 end
 
 def display_board(board)
