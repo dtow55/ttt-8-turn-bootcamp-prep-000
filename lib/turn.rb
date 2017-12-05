@@ -1,5 +1,5 @@
 def turn(board)
-  puts "Where would you like to go?"
+  puts "Please enter 1-9:"
   index = input_to_index(gets.strip)
   if valid_move?(board, index)
     move(board, index)
