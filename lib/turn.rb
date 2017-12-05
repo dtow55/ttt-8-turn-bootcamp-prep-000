@@ -3,7 +3,6 @@ def turn(board)
   index = input_to_index(gets.strip)
   if valid_move?(board, index)
     move(board, index)
-    display_board(board)
   else
     puts "That's not a valid move. Please try again"
     turn(board)
@@ -24,7 +23,7 @@ end
 
 def move(board, index, character = "X")
   board[index] = character
-  board
+  display_board(board)
 end
 
 def valid_move?(board, index)
