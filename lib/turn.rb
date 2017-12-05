@@ -4,7 +4,8 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
   else
-    puts "That's not a valid move."
+    puts "That's not a valid move. Please try again"
+    turn(board)
   end
   display_board(board)
 end
